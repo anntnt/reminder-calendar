@@ -1,0 +1,12 @@
+
+@media (min-width: 992px) {
+    .me-lg-6 {
+      margin-right: 16rem !important; 
+    }
+  }
+  @media (min-width: 1400px) {
+    .me-xl-6 {
+      margin-right: 26rem !important; 
+    }
+  }
+    
