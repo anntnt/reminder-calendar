@@ -17,17 +17,17 @@ function App() {
       <div className="container-fluid">
         <div className="row">
           {/* Left Sidebar with conditional display */}
-          <div className={`col-md-3 p-0 bg-light ${showLeftSidebar ? '' : 'd-none d-md-block'}`}>
+          <div className={`col-lg-2 p-0 bg-light ${showLeftSidebar ? '' : 'd-none d-md-block'}`}>
             <SidebarLeft />
           </div>
 
           {/* Main content */}
-          <div className="col-md-6 d-flex flex-column">
+          <div className="col-lg-8 d-flex flex-column">
             <Main />
           </div>
 
           {/* Right Sidebar */}
-          <div className="col-md-3 p-0 bg-light">
+          <div className="col-lg-2 p-0 bg-light">
             <SidebarRight />
           </div>
         </div>

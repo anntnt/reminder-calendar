@@ -1,4 +1,19 @@
 
+.sidebar-responsive {
+  height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar-responsive {
+    height: 35vh; 
+  }
+}
+@media (max-width: 600px) {
+  .sidebar-responsive {
+    height: 25vh; 
+  }
+}
 @media (min-width: 992px) {
     .me-lg-6 {
       margin-right: 16rem !important; 

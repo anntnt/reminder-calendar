@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 const SidebarLeft = () => (
-  <aside className="vh-100 overflow-auto p-3">
+  <aside className="sidebar-responsive overflow-auto p-3">
     <ul className="nav flex-column small">
       <li className="nav-item">
         <NavLink className="nav-link" to="/" end>
