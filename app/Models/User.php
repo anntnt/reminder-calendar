@@ -1,5 +1,5 @@
 <?php
-namespace App\Models;
+
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Appointment; 
@@ -14,7 +14,7 @@ class User extends Model {
         'password_hash',
     ];
 
-    // Optional: define relationship to Appointment
+    // relationship to Appointment
     public function appointments()
     {
         return $this->hasMany(Appointment::class);

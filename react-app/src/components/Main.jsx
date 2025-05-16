@@ -1,17 +1,29 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Appointments from "../pages/Appointments";
-
-
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Appointments from '../pages/Appointments';
+import Register from '../pages/Register';
+import Login from '../pages/Login';
+import ProtectedRoute from './ProtectedRoute';
 
 const Main = () => (
   <main className="col px-4 py-3">
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/ueber_uns" element={<About />} />
-      <Route path="/termine" element={<Appointments />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/appointments"
+          element={
+            <ProtectedRoute>
+              <Appointments />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
   </main>
 );
+
 export default Main;
