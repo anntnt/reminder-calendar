@@ -23,7 +23,7 @@ function About() {
         </div>
         <div className="col-md-4">
           <img
-            src="./reminder_logo.jpg"
+            src="./images/reminder.jpg"
             alt="Über uns"
             className="img-fluid rounded"
           />
