@@ -20,11 +20,6 @@ export const appointmentSchema = yup
       .string()
       .required('Bezeichnung ist erforderlich'),
 
-    email: yup
-      .string()
-      .email('Ungültige E-Mail-Adresse')
-      .required('E-Mail ist erforderlich'),
-
     reminder: yup
       .object()
       .required('Erinnerung ist erforderlich'),

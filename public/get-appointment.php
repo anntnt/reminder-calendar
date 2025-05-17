@@ -11,8 +11,6 @@ require_once '../config/bootstrap.php';
 require_once '../app/auth.php';
 
 
-use App\Models\Appointment;
-
 // Get the authenticated user via the token
 $user = getAuthenticatedUser();
 

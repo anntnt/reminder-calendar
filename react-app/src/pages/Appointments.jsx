@@ -1,40 +1,29 @@
-import React, { useState } from 'react';
+// Appointments.jsx
+import React, { useState, useEffect } from 'react';
 import AppointmentForm from '../components/AppointmentForm';
 import AppointmentTable from '../components/AppointmentTable';
-import { getAppointments, createAppointment } from '../utils/api';
-import { useEffect } from 'react';
+import { getAppointments } from '../utils/api';
 
 function Appointments() {
   const [appointments, setAppointments] = useState([]);
   const [editingAppointment, setEditingAppointment] = useState(null);
 
+  const loadAppointments = async () => {
+    try {
+      const res = await getAppointments();
+      setAppointments(res.data);
+    } catch (err) {
+      console.error('Error loading appointments', err);
+    }
+  };
+
   useEffect(() => {
-    getAppointments()
-      .then(res => setAppointments(res.data))
-      .catch(err => console.error('Error loading appointments', err));
+    loadAppointments();
   }, []);
 
-  const handleFormSubmit = (data) => {
-    const newAppointment = {
-      id: editingAppointment ? editingAppointment.id : Date.now(),
-      day: new Date(data.date).getDate(),
-      month: new Date(data.date).getMonth() + 1,
-      title: data.title,
-      reminder: data.reminder?.value || data.reminder,
-      email: data.email,
-      date: data.date,
-    };
-
-    if (editingAppointment) {
-      // Update
-      setAppointments(prev =>
-        prev.map(appt => (appt.id === editingAppointment.id ? newAppointment : appt))
-      );
-      setEditingAppointment(null);
-    } else {
-      // Create
-      setAppointments(prev => [...prev, newAppointment]);
-    }
+  const handleFormSubmit = () => {
+    loadAppointments(); // Refresh after creation
+    setEditingAppointment(null);
   };
 
   const handleDelete = (id) => {
@@ -47,7 +36,7 @@ function Appointments() {
   const handleEdit = (appointment) => {
     setEditingAppointment({
       ...appointment,
-      reminder: { value: appointment.reminder, label: appointment.reminder },
+      reminder: { value: appointment.reminder, label: `${appointment.reminder} Tage` },
     });
   };
 
@@ -62,11 +51,10 @@ function Appointments() {
 
           <div className="border rounded p-4 mb-4 bg-light">
             <AppointmentForm
-              onSubmit={handleFormSubmit}
+              onSubmit={handleFormSubmit} // only notify, no local data logic
               defaultValues={editingAppointment || {
                 date: '',
                 title: '',
-                email: '',
                 reminder: null,
               }}
             />
