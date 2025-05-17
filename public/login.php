@@ -1,5 +1,7 @@
 <?php
-use App\Models\User;
+require '../app/cors.php';
+enableCors('http://localhost:3000', true);
+
 require '../config/bootstrap.php';
 require '../app/Models/User.php';
 require '../app/Models/UserToken.php';

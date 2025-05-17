@@ -30,13 +30,13 @@ const LoginForm = () => {
       navigate('/appointments');
     } catch (err) {
       const msg = err.response?.data?.error || 'Login fehlgeschlagen.';
+       console.error('Login error:', err);
       setError(msg);
     }
   };
 
   return (
     <div style={{ maxWidth: '400px', margin: 'auto' }}>
-      <h2>Login</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>

@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Appointments from '../pages/Appointments';
 import Register from '../pages/Register';
 import Login from '../pages/Login';
+import Logout from '../pages/Logout';
 import ProtectedRoute from './ProtectedRoute';
 
 const Main = () => (
@@ -14,6 +15,7 @@ const Main = () => (
         <Route path="/about" element={<About />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route
           path="/appointments"
           element={
