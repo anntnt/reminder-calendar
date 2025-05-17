@@ -1,5 +1,7 @@
 // components/AppointmentTable.jsx
 import React from 'react';
+import { formatAppointmentDate } from '../utils/formatDate'; // adjust path if needed
+
 
 const AppointmentTable = ({ appointments, onDelete, onEdit }) => (
   <div className="border rounded p-4 mb-4 bg-light">
@@ -16,9 +18,9 @@ const AppointmentTable = ({ appointments, onDelete, onEdit }) => (
       <tbody>
         {appointments.map((appointment) => (
           <tr key={appointment.id}>
-            <td>{`${appointment.day}.${appointment.month}`}</td>
+            <td>{formatAppointmentDate(appointment.date)}</td>
             <td>{appointment.title}</td>
-            <td>{appointment.reminder}</td>
+            <td>{appointment.notify_before_days}</td>
             <td>
               <button className="btn btn-sm btn-danger" onClick={() => onDelete(appointment.id)}>Löschen</button>
               <button className="btn btn-sm btn-secondary ms-2" onClick={() => onEdit(appointment)}>Bearbeiten</button>
