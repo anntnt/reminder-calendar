@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import API from '../utils/api';
 
 const RegisterForm = () => {
@@ -28,7 +27,12 @@ const RegisterForm = () => {
 
     try {
       const res = await API.post('/register.php', form);
-      navigate('/login'); // ⬅ redirect immediately to login
+      setMessage('Registrierung erfolgreich! Weiterleitung zum Login...');
+      
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     } catch (err) {
       const msg = err.response?.data?.error || 'Registrierung fehlgeschlagen.';
       setError(msg);

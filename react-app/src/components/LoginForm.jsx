@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import API from '../utils/api';
 
 const LoginForm = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -16,17 +17,9 @@ const LoginForm = () => {
     setError('');
 
     try {
-      const res = await axios.post(
-        'http://localhost/reminder-calendar/public/login.php',
-        form,
-        {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true,
-        }
-      );
-
-      localStorage.setItem('auth_token', res.data.token);
-      localStorage.setItem('user_id', res.data.user_id);
+      const res = await API.post(
+        'login.php',form
+      );           
       navigate('/appointments');
     } catch (err) {
       const msg = err.response?.data?.error || 'Login fehlgeschlagen.';

@@ -3,8 +3,8 @@ require '../app/cors.php';
 enableCors('http://localhost:3000', true);
 
 require '../config/bootstrap.php';
-require '../app/Models/User.php';
-require '../app/Models/UserToken.php';
+use App\Models\User;
+use App\Models\UserToken;
 
 header('Content-Type: application/json');
 
@@ -34,6 +34,14 @@ UserToken::create([
     'user_id'    => $user->id,
     'token'      => $token,
     'expires_at' => date('Y-m-d H:i:s', strtotime('+1 hour')), // expires in 1 hour
+]);
+
+setcookie('auth_token', $token, [
+    'expires' => time() + 3600,        // 1 hour
+    'path' => '/',
+    'secure' => false,                  // true if using HTTPS
+    'httponly' => true,                // JS cannot access
+    'samesite' => 'Lax'             // protects against CSRF
 ]);
 
 echo json_encode([

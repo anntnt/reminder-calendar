@@ -1,6 +1,6 @@
 <?php
 // Set default headers for CORS
-function enableCors($origin = '*', $allowCredentials = false) {
+function enableCors($origin, $allowCredentials) {
     header("Access-Control-Allow-Origin: $origin");
     header("Access-Control-Allow-Headers: Content-Type, Authorization");
     header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
@@ -15,3 +15,4 @@ function enableCors($origin = '*', $allowCredentials = false) {
         exit;
     }
 }
+

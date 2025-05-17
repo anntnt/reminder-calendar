@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from '../utils/api'; 
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -8,19 +8,9 @@ const Logout = () => {
   useEffect(() => {
     const logout = async () => {
       try {
-        await axios.post(
-          'http://localhost/reminder-calendar/public/logout.php',
-          {},
-          {
-            headers: { 'Content-Type': 'application/json' },
-            withCredentials: true,
-          }
+        await API.post(
+          'logout.php',{},
         );
-
-        // Clear auth tokens from local storage
-        localStorage.removeItem('auth_token');
-        localStorage.removeItem('user_id');
-
         // Redirect only after successful logout
         navigate('/login');
       } catch (err) {

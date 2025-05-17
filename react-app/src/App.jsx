@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
+
 function App() {
   const [showLeftSidebar, setShowLeftSidebar] = useState(false);
   const onToggleLeftSidebar = () => setShowLeftSidebar(!showLeftSidebar);
