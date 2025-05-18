@@ -7,6 +7,7 @@ import { reminderOptions } from '../utils/date';
 function Appointments() {
   const [appointments, setAppointments] = useState([]);
   const [editingAppointment, setEditingAppointment] = useState(null);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const loadAppointments = async () => {
     try {
@@ -26,10 +27,22 @@ function Appointments() {
     setEditingAppointment(null);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm('Möchten Sie diesen Termin wirklich löschen?');
+    if (!confirmDelete) return;
+
     setAppointments(prev => prev.filter(appt => appt.id !== id));
     if (editingAppointment?.id === id) {
       setEditingAppointment(null);
+    }
+    try {
+      await API.delete('/delete-appointment.php', {
+        data: { id }
+      });      
+      setSuccessMessage('Termin erfolgreich gelöscht.');
+      setTimeout(() => setSuccessMessage(''), 3000); // Clear after 3 seconds
+    } catch (err) {
+      console.error('Error deleting appointment', err);
     }
   };
 
@@ -72,7 +85,8 @@ function Appointments() {
           <AppointmentTable
             appointments={appointments}
             onDelete={handleDelete}
-            onEdit={handleEdit}           
+            onEdit={handleEdit}     
+            successMessage={successMessage}      
           />
         </div>
       </div>

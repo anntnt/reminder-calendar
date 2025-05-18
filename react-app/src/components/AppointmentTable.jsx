@@ -1,12 +1,17 @@
 import React from 'react';
 import { formatAppointmentDate, formatReminder, sortAppointmentsByDate } from '../utils/date';
 
-const AppointmentTable = ({ appointments, onDelete, onEdit }) => {
+const AppointmentTable = ({ appointments, onDelete, onEdit, successMessage }) => {
   const sortedAppointments = sortAppointmentsByDate(appointments); // asc by default
 
   return (
     <div className="border rounded p-4 mb-4 bg-light">
       <h4 className="mt-4">Ihre Termine</h4>
+      {successMessage && (
+        <div className="alert alert-success" role="alert">
+          {successMessage}
+        </div>
+      )}
       <table className="table table-striped">
         <thead>
           <tr>
