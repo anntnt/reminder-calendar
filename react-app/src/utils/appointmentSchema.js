@@ -14,7 +14,7 @@ export const appointmentSchema = yup
     date: yup
       .date()
       .required('Datum ist erforderlich')
-      .min(new Date(Date.now() + 86400000), 'Datum muss mindestens morgen sein'), // tomorrow or later
+      .min(new Date(Date.now() ), 'Datum muss mindestens morgen sein'), // tomorrow or later
 
     title: yup
       .string()

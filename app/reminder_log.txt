@@ -1,0 +1,82 @@
+[2025-05-18 15:21:59] Failed to send email to anpjure@gmail.com: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server Additional SMTP info: php_network_getaddresses: getaddrinfo for smtp.example.com failed: nodename nor servname provided, or not known
+[2025-05-18 15:21:59] Failed to send email to anpjure@gmail.com: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server Additional SMTP info: php_network_getaddresses: getaddrinfo for smtp.example.com failed: nodename nor servname provided, or not known
+[2025-05-18 15:26:53] === Reminder script started ===
+[2025-05-18 15:26:53] Today's date: 2025-05-18
+[2025-05-18 15:26:53] Total appointments fetched: 17
+[2025-05-18 15:26:53] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 15:26:53] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 15:26:53] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 15:26:53] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 15:26:53] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 15:26:53] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 15:26:53] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 15:26:53] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 15:26:53] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 15:26:53] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 15:26:53] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 15:26:53] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 15:26:53] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 15:26:53] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 15:26:53] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 15:26:53] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 15:26:53] Checking appointment ID 31: appointment date 2025-05-20, notify date 2025-05-18
+[2025-05-18 15:26:53] Appointment ID 31 is due for notification today.
+[2025-05-18 15:26:53] Preparing to send email to anpjure@gmail.com
+[2025-05-18 15:26:53] ❌ Failed to send email to anpjure@gmail.com: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server Additional SMTP info: php_network_getaddresses: getaddrinfo for smtp.example.com failed: nodename nor servname provided, or not known
+[2025-05-18 15:26:53] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 15:26:53] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 15:26:53] === Reminder script completed ===
+[2025-05-18 15:43:15] === Reminder script started ===
+[2025-05-18 15:43:15] Today's date: 2025-05-18
+[2025-05-18 15:43:15] Total appointments fetched: 17
+[2025-05-18 15:43:15] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 15:43:15] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 15:43:15] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 15:43:15] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 15:43:15] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 15:43:15] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 15:43:15] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 15:43:15] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 15:43:15] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 15:43:15] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 15:43:15] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 15:43:15] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 15:43:15] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 15:43:15] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 15:43:15] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 15:43:15] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 15:43:15] Checking appointment ID 31: appointment date 2025-05-20, notify date 2025-05-18
+[2025-05-18 15:43:15] Appointment ID 31 is due for notification today.
+[2025-05-18 15:43:15] Preparing to send email to anpjure@gmail.com
+[2025-05-18 15:43:15] ✅ Email sent to anpjure@gmail.com for appointment ID 31
+[2025-05-18 15:43:15] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 15:43:15] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 15:43:15] === Reminder script completed ===

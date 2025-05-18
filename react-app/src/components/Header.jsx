@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
+import { NavLink} from 'react-router-dom';
 
 function Header({ onToggleLeftSidebar }) {
   return (
@@ -23,11 +24,13 @@ function Header({ onToggleLeftSidebar }) {
 
         {/* Logo (right-aligned with margin) */}
         <div className="col-auto me-5 me-lg-6 me-xl-6">
-          <Image
-            src="/images/reminder_logo.jpg"
-            alt="Logo"
-            className="img-fluid"
-          />
+          <NavLink className="nav-link" to="/" end>
+            <Image
+              src="/images/reminder_logo.jpg"
+              alt="Logo"
+              className="img-fluid"
+            />
+          </NavLink>
         </div>
 
       </div>

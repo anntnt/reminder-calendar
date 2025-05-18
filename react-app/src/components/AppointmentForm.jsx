@@ -49,10 +49,12 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
         payload.id = defaultValues.id;
         res = await API.post('/update-appointment.php', payload);
         setMessage('✅ Termin erfolgreich aktualisiert!');
+        setTimeout(() => setMessage(''), 3000); // Clear after 3 seconds
       } else {
         // CREATE MODE
         res = await API.post('/create-appointment.php', payload);
         setMessage('✅ Termin erfolgreich erstellt!');
+        setTimeout(() => setMessage(''), 3000); // Clear after 3 seconds
       }
   
       reset();
