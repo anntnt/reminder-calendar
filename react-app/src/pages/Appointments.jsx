@@ -38,9 +38,6 @@ function Appointments() {
       opt => opt.value === Number(appointment.notify_before_days || appointment.reminder)
     );
   
-    console.log("🟢 Incoming appointment:", appointment);
-    console.log("🔵 Matched reminder option:", matchedReminder);
-  
     setEditingAppointment({
       ...appointment,
       reminder: matchedReminder || null,

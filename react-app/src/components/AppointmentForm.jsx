@@ -21,10 +21,6 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
     defaultValues,
     resolver: yupResolver(appointmentSchema),
   });
-    // 👉 Log the reminder value passed in from parent
-
-    console.log("📦 Loaded default values in form:", defaultValues);
-    console.log("📌 Reminder received:", defaultValues.reminder);
 
   // Reset form when defaultValues change (on Edit mode)
   useEffect(() => {
