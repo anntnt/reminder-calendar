@@ -8,6 +8,13 @@ export function formatReminder(days) {
       default: return `${days} Tage`;
     }
   }
+  export const reminderOptions = [
+    { value: 1, label: '1 Tag' },
+    { value: 2, label: '2 Tage' },
+    { value: 4, label: '4 Tage' },
+    { value: 7, label: '1 Woche' },
+    { value: 14, label: '2 Wochen' },
+  ];
 
   export function formatAppointmentDate(dateString) {
     const date = new Date(dateString);

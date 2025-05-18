@@ -29,6 +29,7 @@ try {
     // Validate date format (YYYY-MM-DD)
     $date = DateTime::createFromFormat('Y-m-d', $data['date']);
     if (!$date || $date->format('Y-m-d') !== $data['date']) {
+        
         http_response_code(400);
         echo json_encode(['error' => 'Invalid date format, expected YYYY-MM-DD']);
         exit;

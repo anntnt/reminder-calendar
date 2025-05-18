@@ -1,8 +1,8 @@
-// Appointments.jsx
 import React, { useState, useEffect } from 'react';
 import AppointmentForm from '../components/AppointmentForm';
 import AppointmentTable from '../components/AppointmentTable';
-import { getAppointments } from '../utils/api';
+import API  from '../utils/api';
+import { reminderOptions } from '../utils/date';
 
 function Appointments() {
   const [appointments, setAppointments] = useState([]);
@@ -10,7 +10,7 @@ function Appointments() {
 
   const loadAppointments = async () => {
     try {
-      const res = await getAppointments();
+      const res = await API.get('get-appointment.php');
       setAppointments(res.data);
     } catch (err) {
       console.error('Error loading appointments', err);
@@ -34,12 +34,23 @@ function Appointments() {
   };
 
   const handleEdit = (appointment) => {
+    const matchedReminder = reminderOptions.find(
+      opt => opt.value === Number(appointment.notify_before_days || appointment.reminder)
+    );
+  
+    console.log("🟢 Incoming appointment:", appointment);
+    console.log("🔵 Matched reminder option:", matchedReminder);
+  
     setEditingAppointment({
       ...appointment,
-      reminder: { value: appointment.reminder, label: `${appointment.reminder} Tage` },
+      reminder: matchedReminder || null,
     });
   };
 
+  const handleCancelEdit = () => {
+    setEditingAppointment(null);
+  };
+  
   return (
     <div className="container py-4">
       <div className="row align-items-center">
@@ -57,13 +68,14 @@ function Appointments() {
                 title: '',
                 reminder: null,
               }}
+              onCancelEdit={handleCancelEdit}
             />
           </div>
 
           <AppointmentTable
             appointments={appointments}
             onDelete={handleDelete}
-            onEdit={handleEdit}
+            onEdit={handleEdit}           
           />
         </div>
       </div>

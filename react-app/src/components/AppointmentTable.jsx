@@ -23,8 +23,8 @@ const AppointmentTable = ({ appointments, onDelete, onEdit }) => {
               <td>{appointment.title}</td>
               <td>{formatReminder(appointment.notify_before_days)}</td>
               <td>
+                <button className="btn btn-sm btn-primary me-2" onClick={() => onEdit(appointment)}>Bearbeiten</button>
                 <button className="btn btn-sm btn-danger" onClick={() => onDelete(appointment.id)}>Löschen</button>
-                <button className="btn btn-sm btn-secondary ms-2" onClick={() => onEdit(appointment)}>Bearbeiten</button>
               </td>
             </tr>
           ))}
