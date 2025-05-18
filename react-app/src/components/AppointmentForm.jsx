@@ -74,7 +74,6 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
       <form onSubmit={handleSubmit(onFormSubmit)}>
         {message && <div className="alert alert-success">{message}</div>}
         {error && <div className="alert alert-danger">{error}</div>}
-
         <div className="row mb-3">
           {/* Datum */}
           <div className="col-12 col-xl-4">
@@ -96,7 +95,6 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
             {errors.title && <p className="text-danger">{errors.title.message}</p>}
           </div>
 
-          {/* Erinnerung and Button */}
           <div className="col-12 col-xl-3 d-flex flex-column justify-content-between">
             <div>
               <label className="form-label">Erinnerung</label>
@@ -109,25 +107,33 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
               />
               {errors.reminder && <p className="text-danger">{errors.reminder.message}</p>}
             </div>
+          </div>
 
+        </div>
+        <div className="row mb-3">
+          <div className="col-12 col-xl-4">
+          </div>
+          <div className="col-12 col-xl-5">
+            {defaultValues?.id && (
+              <div className="d-grid mt-3">
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary"
+                  onClick={onCancelEdit}                >
+                  ❌ Bearbeitung abbrechen
+                </button>
+              </div>
+            )}
+          </div>
+
+          <div className="col-12 col-xl-3 d-flex flex-column justify-content-between">  
             <div className="d-grid mt-3">
               <button type="submit" className="btn btn-primary text-uppercase">
                 Speichern
               </button>
             </div>
-            {defaultValues?.id && (
-            <div className="d-grid mt-3">
-              <button
-                type="button"
-                className="btn btn-outline-secondary mt-2"
-                onClick={onCancelEdit}
-              >
-                ❌ Bearbeitung abbrechen
-              </button>
-            </div>
-            )}
-
           </div>
+
         </div>
       </form>
     </>

@@ -31,7 +31,7 @@ export function formatReminder(days) {
 
   export function getFutureDate() {
     const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 2);
+    tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toISOString().split('T')[0]; // 'YYYY-MM-DD'
   }
   
