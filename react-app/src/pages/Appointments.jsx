@@ -9,8 +9,7 @@ function Appointments() {
   const [appointments, setAppointments] = useState([]);
   const [editingAppointment, setEditingAppointment] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
-  const {userName} = useUser();
-  const {userEmail} = useUser();
+  const { userName, userEmail } = useUser();
 
   const loadAppointments = async () => {
     try {

@@ -46,4 +46,6 @@ setcookie('auth_token', $token, [
 echo json_encode([
     'authenticated' => true,
     'message'       => 'Login successful',
+    'name'          => $user->name,
+    'email'         => $user->email
 ]);
