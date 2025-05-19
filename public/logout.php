@@ -34,4 +34,6 @@ setcookie('auth_token', '', [
     'samesite' => 'Lax'
 ]);
 
-echo json_encode(['message' => 'Logout erfolgreich']);
+echo json_encode([
+    'authenticated' => false,
+    'message' => 'Logout erfolgreich']);

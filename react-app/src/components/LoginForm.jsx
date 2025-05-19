@@ -20,7 +20,7 @@ const LoginForm = () => {
     try {
       const res = await API.post('login.php', form);
       const data = res.data;
-      
+   
       if (data.authenticated) {
         setIsLoggedIn(true);
         setUserName(data.name);
