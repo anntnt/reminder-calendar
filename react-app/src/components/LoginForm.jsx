@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useUser } from '../utils/UserContext';
 import { useNavigate } from 'react-router-dom';
 import API from '../utils/api';
 
-const LoginForm = ({ setIsLoggedIn, setUserName, setUserEmail }) => {
+const LoginForm = () => {
+  const { setIsLoggedIn, setUserName, setUserEmail } = useUser();
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();

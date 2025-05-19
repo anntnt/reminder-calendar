@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useUser } from '../utils/UserContext';
 import AppointmentForm from '../components/AppointmentForm';
 import AppointmentTable from '../components/AppointmentTable';
 import API  from '../utils/api';
 import { reminderOptions } from '../utils/date';
 
-function Appointments({userName, userEmail}) {  
+function Appointments() {  
   const [appointments, setAppointments] = useState([]);
   const [editingAppointment, setEditingAppointment] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
+  const {userName} = useUser();
+  const {userEmail} = useUser();
 
   const loadAppointments = async () => {
     try {
@@ -65,13 +68,13 @@ function Appointments({userName, userEmail}) {
     <div className="container py-4">
       <div className="row align-items-center">
         <div className="col-md-12">
-          <h1 className="display-5 fw-bold mb-3">Dein persönlicher Terminplaner</h1>
-          <p className="text-muted header-text">
+          <h1 className="fw-bold mb-3">Dein persönlicher Terminplaner</h1>
+          <p className="fs-5 text-muted header-text">
             Hallo {userName}!
           </p>
           <p className="text-muted">
-          Verwalte ganz einfach online deine persönlichen Termine und erhalte automatische Erinnerungen per E-Mail an deine Adresse: 
-          <strong>{userEmail}</strong>.
+            Verwalte ganz einfach online deine persönlichen Termine und erhalte automatische Erinnerungen per E-Mail an deine Adresse: 
+            <strong> {userEmail}</strong>.
           </p>
 
           <div className="border rounded p-4 mb-4 bg-light">

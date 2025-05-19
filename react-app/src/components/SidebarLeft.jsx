@@ -1,6 +1,9 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import React from 'react';
-const SidebarLeft = ({ isLoggedIn }) => {
+import { useUser } from '../utils/UserContext';
+
+const SidebarLeft = () => {
+  const { isLoggedIn } = useUser();
   const navigate = useNavigate();
 
   const handleLogout = () => {
