@@ -80,3 +80,247 @@
 [2025-05-18 15:43:15] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
 [2025-05-18 15:43:15] Skipped: Appointment ID 33 is not due today.
 [2025-05-18 15:43:15] === Reminder script completed ===
+[2025-05-18 16:36:15] === Reminder script started ===
+[2025-05-18 16:36:15] Today's date: 2025-05-18
+[2025-05-18 16:36:15] Total appointments fetched: 19
+[2025-05-18 16:36:15] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 16:36:15] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 16:36:15] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 16:36:15] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 16:36:15] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:36:15] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 16:36:15] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 16:36:15] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 16:36:15] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 16:36:15] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 16:36:15] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 16:36:15] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:36:15] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:36:15] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 16:36:15] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 16:36:15] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 16:36:15] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 34: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:36:15] Skipped: Appointment ID 34 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 35: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:36:15] Skipped: Appointment ID 35 is not due today.
+[2025-05-18 16:36:15] Checking appointment ID 36: appointment date 2025-05-25, notify date 2025-05-24
+[2025-05-18 16:36:15] Skipped: Appointment ID 36 is not due today.
+[2025-05-18 16:36:15] === Reminder script completed ===
+[2025-05-18 16:36:59] === Reminder script started ===
+[2025-05-18 16:36:59] Today's date: 2025-05-18
+[2025-05-18 16:36:59] Total appointments fetched: 20
+[2025-05-18 16:36:59] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 16:36:59] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 16:36:59] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 16:36:59] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 16:36:59] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:36:59] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 16:36:59] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 16:36:59] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 16:36:59] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 16:36:59] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 16:36:59] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 16:36:59] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:36:59] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:36:59] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 16:36:59] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 16:36:59] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 16:36:59] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 34: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:36:59] Skipped: Appointment ID 34 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 35: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:36:59] Skipped: Appointment ID 35 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 36: appointment date 2025-05-25, notify date 2025-05-24
+[2025-05-18 16:36:59] Skipped: Appointment ID 36 is not due today.
+[2025-05-18 16:36:59] Checking appointment ID 37: appointment date 2025-05-20, notify date 2025-05-19
+[2025-05-18 16:36:59] Skipped: Appointment ID 37 is not due today.
+[2025-05-18 16:36:59] === Reminder script completed ===
+[2025-05-18 16:38:00] === Reminder script started ===
+[2025-05-18 16:38:00] Today's date: 2025-05-18
+[2025-05-18 16:38:00] Total appointments fetched: 21
+[2025-05-18 16:38:00] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 16:38:00] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 16:38:00] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 16:38:00] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 16:38:00] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:38:00] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 16:38:00] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 16:38:00] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 16:38:00] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 16:38:00] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 16:38:00] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 16:38:00] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:38:00] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:38:00] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 16:38:00] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 16:38:00] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 16:38:00] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 34: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:38:00] Skipped: Appointment ID 34 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 35: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:38:00] Skipped: Appointment ID 35 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 36: appointment date 2025-05-25, notify date 2025-05-24
+[2025-05-18 16:38:00] Skipped: Appointment ID 36 is not due today.
+[2025-05-18 16:38:00] Checking appointment ID 37: appointment date 2025-05-19, notify date 2025-05-18
+[2025-05-18 16:38:00] Appointment ID 37 is due for notification today.
+[2025-05-18 16:38:00] Preparing to send email to abc@123.com
+[2025-05-18 16:38:00] ✅ Email sent to abc@123.com for appointment ID 37
+[2025-05-18 16:38:00] Checking appointment ID 38: appointment date 2025-05-20, notify date 2025-05-18
+[2025-05-18 16:38:00] Appointment ID 38 is due for notification today.
+[2025-05-18 16:38:00] Preparing to send email to abc@123.com
+[2025-05-18 16:38:00] ✅ Email sent to abc@123.com for appointment ID 38
+[2025-05-18 16:38:00] === Reminder script completed ===
+[2025-05-18 16:43:18] === Reminder script started ===
+[2025-05-18 16:43:18] Today's date: 2025-05-18
+[2025-05-18 16:43:18] Total appointments fetched: 22
+[2025-05-18 16:43:18] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 16:43:18] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 16:43:18] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 16:43:18] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 16:43:18] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:43:18] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 16:43:18] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 16:43:18] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 16:43:18] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 16:43:18] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 16:43:18] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 16:43:18] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:43:18] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:43:18] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 16:43:18] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 16:43:18] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 16:43:18] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 34: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:43:18] Skipped: Appointment ID 34 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 35: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:43:18] Skipped: Appointment ID 35 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 36: appointment date 2025-05-25, notify date 2025-05-24
+[2025-05-18 16:43:18] Skipped: Appointment ID 36 is not due today.
+[2025-05-18 16:43:18] Checking appointment ID 37: appointment date 2025-05-19, notify date 2025-05-18
+[2025-05-18 16:43:18] Appointment ID 37 is due for notification today.
+[2025-05-18 16:43:18] Preparing to send email to abc@123.com
+[2025-05-18 16:43:18] ✅ Email sent to abc@123.com for appointment ID 37
+[2025-05-18 16:43:18] Checking appointment ID 38: appointment date 2025-05-20, notify date 2025-05-18
+[2025-05-18 16:43:18] Appointment ID 38 is due for notification today.
+[2025-05-18 16:43:18] Preparing to send email to abc@123.com
+[2025-05-18 16:43:18] ✅ Email sent to abc@123.com for appointment ID 38
+[2025-05-18 16:43:18] Checking appointment ID 39: appointment date 2025-05-25, notify date 2025-05-18
+[2025-05-18 16:43:18] Appointment ID 39 is due for notification today.
+[2025-05-18 16:43:18] Preparing to send email to abc@123.com
+[2025-05-18 16:43:18] ✅ Email sent to abc@123.com for appointment ID 39
+[2025-05-18 16:43:18] === Reminder script completed ===
+[2025-05-18 16:47:32] === Reminder script started ===
+[2025-05-18 16:47:32] Today's date: 2025-05-18
+[2025-05-18 16:47:32] Total appointments fetched: 22
+[2025-05-18 16:47:32] Checking appointment ID 1: appointment date 2025-06-13, notify date 2025-06-11
+[2025-05-18 16:47:32] Skipped: Appointment ID 1 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 2: appointment date 2026-05-07, notify date 2026-05-04
+[2025-05-18 16:47:32] Skipped: Appointment ID 2 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 3: appointment date 2025-05-29, notify date 2025-05-28
+[2025-05-18 16:47:32] Skipped: Appointment ID 3 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 6: appointment date 2025-06-05, notify date 2025-06-01
+[2025-05-18 16:47:32] Skipped: Appointment ID 6 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 7: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:47:32] Skipped: Appointment ID 7 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 10: appointment date 2025-07-30, notify date 2025-07-26
+[2025-05-18 16:47:32] Skipped: Appointment ID 10 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 13: appointment date 2025-06-06, notify date 2025-05-23
+[2025-05-18 16:47:32] Skipped: Appointment ID 13 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 16: appointment date 2027-01-05, notify date 2026-12-29
+[2025-05-18 16:47:32] Skipped: Appointment ID 16 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 17: appointment date 2025-06-03, notify date 2025-05-30
+[2025-05-18 16:47:32] Skipped: Appointment ID 17 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 19: appointment date 2025-08-14, notify date 2025-07-31
+[2025-05-18 16:47:32] Skipped: Appointment ID 19 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 20: appointment date 2025-08-21, notify date 2025-08-14
+[2025-05-18 16:47:32] Skipped: Appointment ID 20 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 22: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:47:32] Skipped: Appointment ID 22 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 23: appointment date 2025-05-27, notify date 2025-05-25
+[2025-05-18 16:47:32] Skipped: Appointment ID 23 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 28: appointment date 2030-05-20, notify date 2030-05-19
+[2025-05-18 16:47:32] Skipped: Appointment ID 28 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 29: appointment date 2027-02-19, notify date 2027-02-05
+[2025-05-18 16:47:32] Skipped: Appointment ID 29 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 33: appointment date 2025-05-20, notify date 2025-05-16
+[2025-05-18 16:47:32] Skipped: Appointment ID 33 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 34: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:47:32] Skipped: Appointment ID 34 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 35: appointment date 2025-05-25, notify date 2025-05-21
+[2025-05-18 16:47:32] Skipped: Appointment ID 35 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 36: appointment date 2025-05-25, notify date 2025-05-24
+[2025-05-18 16:47:32] Skipped: Appointment ID 36 is not due today.
+[2025-05-18 16:47:32] Checking appointment ID 37: appointment date 2025-05-19, notify date 2025-05-18
+[2025-05-18 16:47:32] Appointment ID 37 is due for notification today.
+[2025-05-18 16:47:32] Preparing to send email to abc@123.com
+[2025-05-18 16:47:32] ✅ Email sent to abc@123.com for appointment ID 37
+[2025-05-18 16:47:32] Checking appointment ID 38: appointment date 2025-05-20, notify date 2025-05-18
+[2025-05-18 16:47:32] Appointment ID 38 is due for notification today.
+[2025-05-18 16:47:32] Preparing to send email to abc@123.com
+[2025-05-18 16:47:32] ✅ Email sent to abc@123.com for appointment ID 38
+[2025-05-18 16:47:32] Checking appointment ID 39: appointment date 2025-05-25, notify date 2025-05-18
+[2025-05-18 16:47:32] Appointment ID 39 is due for notification today.
+[2025-05-18 16:47:32] Preparing to send email to abc@123.com
+[2025-05-18 16:47:32] ✅ Email sent to abc@123.com for appointment ID 39
+[2025-05-18 16:47:32] === Reminder script completed ===

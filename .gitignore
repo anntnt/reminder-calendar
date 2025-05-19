@@ -1,6 +1,7 @@
 node_modules/
 vendor/
 # Logs
+*log.txt
 logs
 *.log
 npm-debug.log*
