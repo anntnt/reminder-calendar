@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import API from '../utils/api';
 
-const LoginForm = () => {
+const LoginForm = ({ setIsLoggedIn, setUserName, setUserEmail }) => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -17,13 +16,22 @@ const LoginForm = () => {
     setError('');
 
     try {
-      const res = await API.post(
-        'login.php',form
-      );           
-      navigate('/appointments');
+      const res = await API.post('login.php', form);
+      const data = res.data;
+      
+      if (data.authenticated) {
+        setIsLoggedIn(true);
+        setUserName(data.name);
+        setUserEmail(data.email);
+        navigate('/appointments');
+      } else {
+        setError('Login fehlgeschlagen.');
+      }
+      
     } catch (err) {
       const msg = err.response?.data?.error || 'Login fehlgeschlagen.';
-       console.error('Login error:', err);
+      console.error('Login error:', msg);
+      console.error('Error details:', err);
       setError(msg);
     }
   };

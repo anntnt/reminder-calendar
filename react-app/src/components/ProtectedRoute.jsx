@@ -1,29 +1,14 @@
-import React from 'react';
+// ProtectedRoute.jsx
+import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import API from '../utils/api';
-import { useEffect, useState } from 'react';
 
-const ProtectedRoute = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(null);
+// This component checks if the user is logged in before rendering the children components.
+// If the user is not logged in, it redirects them to the login page.
 
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const res = await API.get('/auth-check.php');
-        setIsAuthenticated(res.data.authenticated);
-      } catch (err) {
-        setIsAuthenticated(false);
-      }
-    };
+const ProtectedRoute = ({ children, isLoggedIn }) => {
+  const [checked, setChecked] = useState(false);
 
-    checkAuth();
-  }, []);
-
-  if (isAuthenticated === null) {
-    return <p>Checking authentication...</p>; 
-  }
-
-  if (!isAuthenticated) {
+  if (!isLoggedIn) {
     return <Navigate to="/login" replace />;
   }
 

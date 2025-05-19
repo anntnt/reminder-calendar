@@ -15,7 +15,7 @@ header('Content-Type: application/json');
 
 
 try {
-    $user = authenticate(); // Should read from $_COOKIE['auth_token']
+    $user = authenticate(); // read from $_COOKIE['auth_token']
     echo json_encode(['authenticated' => true, 'user_id' => $user->id]);
 } catch (Exception $e) {
     echo json_encode(['authenticated' => false]);

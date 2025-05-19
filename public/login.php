@@ -27,25 +27,27 @@ if (!$user || !password_verify($data['password'], $user->password_hash)) {
 // Generate token
 $token = bin2hex(random_bytes(32));
 
-// Save token
-$token = bin2hex(random_bytes(32));
-
 UserToken::create([
     'user_id'    => $user->id,
     'token'      => $token,
     'expires_at' => date('Y-m-d H:i:s', strtotime('+1 hour')), // expires in 1 hour
 ]);
 
+// Set cookie
 setcookie('auth_token', $token, [
-    'expires' => time() + 3600,        // 1 hour
+    'expires' => time() + 3600,
     'path' => '/',
-    'secure' => false,                  // true if using HTTPS
-    'httponly' => true,                // JS cannot access
-    'samesite' => 'Lax'             // protects against CSRF
+    'secure' => false,   // true if using HTTPS
+    'httponly' => true,
+    'samesite' => 'Lax'
 ]);
 
+// ✅ Return full user info so frontend doesn't need extra request
 echo json_encode([
-    'message' => 'Login successful',
-    'token'   => $token,
-    'user_id' => $user->id,
+    'authenticated' => true,
+    'message'       => 'Login successful',
+    'token'         => $token,
+    'user_id'       => $user->id,
+    'name'          => $user->name,
+    'email'         => $user->email,
 ]);

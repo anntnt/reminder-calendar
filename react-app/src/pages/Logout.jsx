@@ -2,33 +2,21 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API from '../utils/api'; 
 
-const Logout = () => {
+const Logout = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const logout = async () => {
       try {
-        await API.post(
-          'logout.php',{},
-        );
-        // Redirect only after successful logout
+        await API.post('logout.php');
+        setIsLoggedIn(false); // ✅ update auth state
         navigate('/login');
-      } catch (err) {
-        console.error('Logout failed', err);
-        // Optionally redirect anyway
+      } catch {
         navigate('/login');
       }
     };
-
     logout();
-  }, [navigate]);
+  }, []);
 
-  return (
-    <div className="container">
-      <h1 className="text-center">Logging out...</h1>
-      <p className="text-center">Redirecting to the login page...</p>
-    </div>
-  );
-};
-
+}
 export default Logout;
