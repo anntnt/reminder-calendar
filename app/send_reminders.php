@@ -47,8 +47,8 @@ foreach ($appointments as $appointment) {
             $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
 
             $mail->addAddress($user->email, $user->name);
-            $mail->Subject = 'Appointment Reminder';
-            $mail->Body = "Dear {$user->name},\n\nThis is a reminder that you have an appointment titled \"{$appointment->title}\" scheduled for {$appointment->date}.";
+            $mail->Subject = 'Termin Erinnerung';
+            $mail->Body = "Hi {$user->name},\n\ndies ist eine Erinnerung daran, dass du einen Termin mit dem Titel \"{$appointment->title}\" am {$appointment->date} hast.";
 
             $mail->send();
 
