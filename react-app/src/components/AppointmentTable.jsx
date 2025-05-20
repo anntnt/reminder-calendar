@@ -6,7 +6,7 @@ const AppointmentTable = ({ appointments, onDelete, onEdit, successMessage }) =>
 
   return (
     <div className="border rounded p-4 mb-4 bg-light">
-      <h4 className="mt-4">Ihre Termine</h4>
+      <h4 className="mt-4">Deine Termine</h4>
       {successMessage && (
         <div className="alert alert-success" role="alert">
           {successMessage}
