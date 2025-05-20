@@ -16,11 +16,42 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
     handleSubmit,
     control,
     reset,
+    watch,
     formState: { errors },
   } = useForm({
     defaultValues,
-    resolver: yupResolver(appointmentSchema),
+    resolver: yupResolver(appointmentSchema, { mode: 'sync' }), // ✅ this disables casting
   });
+
+  /*const watchedDate = watch('date');
+  const watchedReminder = watch('reminder');
+  
+  useEffect(() => {
+    if (watchedDate && watchedReminder?.value !== undefined) {
+      // Parse local calendar date from string (e.g., '2025-05-21')
+      const [year, month, day] = watchedDate.split('-').map(Number);
+      const appointmentDate = new Date(year, month - 1, day); // local date
+  
+      // Calculate reminder date
+      const reminderDays = watchedReminder.value;
+      const reminderDate = new Date(appointmentDate);
+      reminderDate.setDate(reminderDate.getDate() - reminderDays);
+  
+      // Build local 'today' date
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  
+      // Output to browser console
+      console.log('📅 Selected appointment date:', appointmentDate.toLocaleDateString());
+      console.log('🔔 Reminder value:', reminderDays);
+      console.log('📨 Calculated reminder date:', reminderDate.toLocaleDateString());
+      console.log('📆 Today:', today.toLocaleDateString());
+      console.log('⛔ Is reminder in past?', reminderDate < today);
+      
+    }
+  }, [watchedDate, watchedReminder]);*/
+  
+
 
   // Reset form when defaultValues change (on Edit mode)
   useEffect(() => {
@@ -33,12 +64,12 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
     setError('');
   
     try {
-      const dateObj = new Date(data.date);
-      const formattedDate = new Date(dateObj.setDate(dateObj.getDate() + 1)).toISOString().split('T')[0];
-  
+      const [year, month, day] = data.date.split('-');
+      const formattedDate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+      
       const payload = {
         title: data.title,
-        date: formattedDate,
+        date: data.date,
         notify_before_days: data.reminder.value,
       };
   

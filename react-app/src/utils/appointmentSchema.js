@@ -12,10 +12,32 @@ export const appointmentSchema = yup
   .object()
   .shape({
     date: yup
-      .date()
-      .required('Datum ist erforderlich')
-      .min(new Date(Date.now() ), 'Datum muss mindestens morgen sein'), // tomorrow or later
+    .string()
+    .required('Datum ist erforderlich')
+    .test(
+      'is-at-least-tomorrow',
+      'Datum muss mindestens morgen sein',
+      function (value) {
+        if (!value) return false;
+  
+        const [year, month, day] = value.split('-').map(Number);
+        const inputDate = new Date(year, month - 1, day);
+  
+        const now = new Date();
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
 
+        return (
+          inputDate.getFullYear() > tomorrow.getFullYear() ||
+          (inputDate.getFullYear() === tomorrow.getFullYear() &&
+            inputDate.getMonth() > tomorrow.getMonth()) ||
+          (inputDate.getFullYear() === tomorrow.getFullYear() &&
+            inputDate.getMonth() === tomorrow.getMonth() &&
+            inputDate.getDate() >= tomorrow.getDate())
+        );
+      }
+    ),
     title: yup
       .string()
       .required('Bezeichnung ist erforderlich'),
@@ -25,18 +47,28 @@ export const appointmentSchema = yup
       .required('Erinnerung ist erforderlich'),
   })
   .test(
-    'reminder-valid',
-    'Erinnerung liegt in der Vergangenheit',
-    (values) => {
-      if (!values.date || !values.reminder) return false;
-
-      const reminderDays = reminderDaysMap[values.reminder.value] || 0;
-      const reminderDate = new Date(values.date);
-      reminderDate.setDate(reminderDate.getDate() - reminderDays);
-
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-
-      return reminderDate > today;
+    {
+      name: 'reminder-valid',
+      message: 'Der Erinnerungstag liegt in der Vergangenheit...',
+      test(values) {
+        const { date, reminder } = values;
+        if (!date || !reminder?.value) return false;
+    
+        const [year, month, day] = date.split('-').map(Number);
+        const appointmentDate = new Date(year, month - 1, day);
+        const reminderDays = reminder.value;
+        const reminderDate = new Date(appointmentDate);
+        reminderDate.setDate(reminderDate.getDate() - reminderDays);
+    
+        const now = new Date();
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    
+        if (reminderDate < today) {
+          // Manually create a field error on `reminder`
+          throw this.createError({ path: 'reminder', message: this.message });
+        }
+    
+        return true;
+      }
     }
   );
