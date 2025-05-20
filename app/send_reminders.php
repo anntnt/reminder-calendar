@@ -25,39 +25,45 @@ foreach ($appointments as $appointment) {
 
     logMessage("Checking appointment ID {$appointment->id}: appointment date {$appointmentDate}, notify date {$notifyDate}");
 
-    if ($today === $notifyDate) {
+    if ($today === $notifyDate && !$appointment->reminder_sent) {
         logMessage("Appointment ID {$appointment->id} is due for notification today.");
-
+    
         $user = $appointment->user;
-
+    
         if (!$user || empty($user->email)) {
             logMessage("Skipped: No user or email for appointment ID {$appointment->id}");
             continue;
         }
-
+    
         $mail = new PHPMailer(true);
-
+    
         try {
             logMessage("Preparing to send email to {$user->email}");
-
+    
             $mail->isSMTP();
             $mail->Host = $_ENV['MAIL_HOST'];
             $mail->SMTPAuth = filter_var($_ENV['MAIL_SMTP_AUTH'], FILTER_VALIDATE_BOOLEAN);
             $mail->Port = (int)$_ENV['MAIL_PORT'];
             $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-
+    
             $mail->addAddress($user->email, $user->name);
             $mail->Subject = 'Termin Erinnerung';
             $mail->Body = "Hi {$user->name},\n\ndies ist eine Erinnerung daran, dass du einen Termin mit dem Titel \"{$appointment->title}\" am {$appointment->date} hast.";
-
+    
             $mail->send();
-
+    
             logMessage("✅ Email sent to {$user->email} for appointment ID {$appointment->id}");
+    
+            // ✅ Mark appointment as reminded
+            $appointment->reminder_sent = true;
+            $appointment->save();
+    
         } catch (Exception $e) {
             logMessage("❌ Failed to send email to {$user->email}: {$mail->ErrorInfo}");
         }
-    } else {
-        logMessage("Skipped: Appointment ID {$appointment->id} is not due today.");
+    }
+     else {
+        logMessage("Skipped: Appointment ID {$appointment->id} is not due for notification or already sent.");
     }
 }
 

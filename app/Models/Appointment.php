@@ -14,6 +14,7 @@ class Appointment extends Model
         'title',
         'date',
         'notify_before_days',
+        'reminder_sent', 
     ];
 
     // Optional: define relationship to User
