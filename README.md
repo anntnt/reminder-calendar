@@ -31,19 +31,19 @@
 ![DB Diagram](Screenshot_drawsql.png)
 
 ### Schritte
-1.  Projektordner vorbereiten
+#### 1.  Projektordner vorbereiten
 - XAMPP installieren und starten.
 - Lege einen neuen Ordner im htdocs-Verzeichnis von XAMPP an, z. B. reminder-calendar.
 ```bash
 cd C:\xampp\htdocs
 ```
 
-2. Repository klonen oder Dateien kopieren
+#### 2. Repository klonen oder Dateien kopieren
 ```bash
-git clone [<REPOSITORY-URL>](https://github.com/anntnt/reminder-calendar.git) reminder-calendar
+git clone https://github.com/anntnt/reminder-calendar.git reminder-calendar
 ```  
 
-3. Backend (Ordner app/ mit PHP & Eloquent ORM) einrichten
+#### 3. Backend (Ordner app/ mit PHP & Eloquent ORM) einrichten
 - In das Verzeichnis app/ wechseln und Dependencies installieren:
 ```bash
 cd reminder-calendar/app
@@ -71,14 +71,14 @@ $ALLOWED_ORIGINS = [
     'https://reminder-calendar.fly.dev' #Ersetze durch die richtige Domain“
 ];
 ```
-4. MySQL-Datenbank mit phpMyAdmin
+#### 4. MySQL-Datenbank mit phpMyAdmin
 - Öffne http://localhost/phpmyadmin
 
 - Erstelle eine neue Datenbank mit dem Namen reminder_calendar
 
 - Führe ggf. das SQL-Skript database/schema.sql aus, um Tabellen zu erstellen
 
-5. Umgebungsvariablen setzen
+#### 5. Umgebungsvariablen setzen
 - Erstelle eine .env-Datei im Verzeichnis react-app/, ersetze durch die richtigen daten
 ```bash
 DB_HOST=127.0.0.1
@@ -88,7 +88,7 @@ DB_USER=xxxxx
 DB_PASS=xxxxx
 
 ```
-6. Frontend (react-app/) einrichten
+#### 6. Frontend (react-app/) einrichten
 - Wechsle in das Verzeichnis react-app/:
 ```bash
 cd ../react-app
@@ -103,7 +103,7 @@ npm run dev
 ```
 React läuft standardmäßig unter http://localhost:3000
 
-7. Erinnerungs-Skript ausführen
+#### 7. Erinnerungs-Skript ausführen
 Das Projekt enthält ein PHP-Skript zur automatischen Erinnerungsversendung per E-Mail:
 ```bash
 php app/send_reminders.php
@@ -111,7 +111,7 @@ php app/send_reminders.php
 **Automatisierung (Cronjob)**
 Um tägliche Erinnerungen automatisch zu versenden, kann man einen Cronjob einrichten
 
-9. Testmails mit Mailhog anzeigen
+#### 8. Testmails mit Mailhog anzeigen
 
 Falls man Mailhog zur lokalen Mail-Entwicklung verwendet:
 
@@ -133,7 +133,7 @@ MAIL_FROM_NAME="Reminder System"
 ```
 ![Mailhog](Screenshot_mailhog.png)
 
-1.  Zukünftige Erweiterungen
+## Zukünftige Erweiterungen
 - Möglichkeit zum Ändern des Passworts
 - Adresse hinzufügen und über Google Maps anzeigen
 - Integration mit Google Kalender oder Outlook
