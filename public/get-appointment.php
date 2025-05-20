@@ -3,12 +3,13 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);*/
 
+require '../config/bootstrap.php';
 require '../app/cors.php';
-enableCors('http://localhost:3000', true);
-
-header('Content-Type: application/json');
-require_once '../config/bootstrap.php';
+enableCors($ALLOWED_ORIGINS, true);
 require_once '../app/auth.php';
+header('Content-Type: application/json');
+
+
 
 
 // Get the authenticated user via the token

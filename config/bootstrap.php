@@ -28,3 +28,9 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
+// Configuration for CORS
+$ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://reminder-calendar.fly.dev'
+];
+

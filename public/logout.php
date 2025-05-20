@@ -1,8 +1,7 @@
 <?php
-require '../app/cors.php';
-enableCors('http://localhost:3000', true);
-
 require '../config/bootstrap.php';
+require '../app/cors.php';
+enableCors($ALLOWED_ORIGINS, true);
 require '../app/auth.php';
 use App\Models\UserToken;
 

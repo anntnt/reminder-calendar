@@ -1,11 +1,9 @@
 <?php
 use App\Models\Appointment;
 
-require '../app/cors.php';
-enableCors('http://localhost:3000', true);
-
 require '../config/bootstrap.php';
-require '../app/auth.php';
+require '../app/cors.php';
+enableCors($ALLOWED_ORIGINS, true);
 
 header('Content-Type: application/json');
 
