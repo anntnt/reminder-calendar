@@ -27,6 +27,9 @@
 - Bootstrap CSS
 - XAMPP & MySQL
 
+### Database diagram
+![DB Diagram](Screenshot_drawsql.png)
+
 ### Schritte
 1.  Projektordner vorbereiten
 - XAMPP installieren und starten.
@@ -128,8 +131,9 @@ MAIL_PORT=1025
 MAIL_FROM_ADDRESS=no-reply@example.com
 MAIL_FROM_NAME="Reminder System"
 ```
+![Mailhog](Screenshot_mailhog.png)
 
-10. Zukünftige Erweiterungen
+1.  Zukünftige Erweiterungen
 - Möglichkeit zum Ändern des Passworts
 - Adresse hinzufügen und über Google Maps anzeigen
 - Integration mit Google Kalender oder Outlook
