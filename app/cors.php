@@ -5,9 +5,12 @@ function enableCors($allowedOrigins = [], $allowCredentials = false) {
     }
 
     $origin = $_SERVER['HTTP_ORIGIN'];
+    // Log the origin for debugging purposes
+    //echo("CORS request from origin: $origin");
 
     if (in_array($origin, $allowedOrigins)) {
         header("Access-Control-Allow-Origin: $origin");
+
 
         if ($allowCredentials) {
             header("Access-Control-Allow-Credentials: true");

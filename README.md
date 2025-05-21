@@ -79,7 +79,7 @@ $ALLOWED_ORIGINS = [
 - Führe ggf. das SQL-Skript database/schema.sql aus, um Tabellen zu erstellen
 
 #### 5. Umgebungsvariablen setzen
-- Erstelle eine .env-Datei im Verzeichnis react-app/, ersetze durch die richtigen daten
+- Erstelle eine .env-Datei im Projekt Verzeichnis, ersetze durch die richtigen daten
 ```bash
 DB_HOST=127.0.0.1
 DB_NAME=reminder-calendar
@@ -99,7 +99,7 @@ npm install
 ```
 - Entwicklungsserver starten:
 ```bash
-npm run dev
+npm start
 ```
 React läuft standardmäßig unter http://localhost:3000
 

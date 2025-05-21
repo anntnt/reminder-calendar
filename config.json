@@ -1,0 +1,19 @@
+{
+    "image": "your-image-name-or-digest",
+    "config": {
+      "entrypoint": ["/bin/sh"],
+      "env": {
+        "MYSQL_ROOT_PASSWORD": "your-password"
+      },
+      "restart": {
+        "policy": "no"
+      },
+      "auto_destroy": false
+    },
+    "guest": {
+      "cpu_kind": "shared",
+      "cpus": 1,
+      "memory_mb": 1024
+    }
+  }
+  
