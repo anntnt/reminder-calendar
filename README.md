@@ -30,7 +30,7 @@
 ### Database diagram
 ![DB Diagram](Screenshot_drawsql.png)
 
-### Schritte
+### Anleitung: Projekt lokal installieren
 #### 1.  Projektordner vorbereiten
 - XAMPP installieren und starten.
 - Lege einen neuen Ordner im htdocs-Verzeichnis von XAMPP an, z. B. reminder-calendar.
