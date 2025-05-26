@@ -2,7 +2,7 @@
 
 ## Projektbeschreibung
 
-**Reminder Calendar** ist eine Webanwendung zur effizienten Verwaltung persönlicher Termine und Erinnerungen. Sie kombiniert ein modernes Frontend auf Basis von React mit einem PHP-Backend, das unter Verwendung von Eloquent ORM auf eine MySQL-Datenbank zugreift.
+**Reminder Calendar** ist eine laufende Webanwendung zur Verwaltung persönlicher Termine und Erinnerungen. Sie kombiniert ein Frontend auf Basis von React mit einem PHP-Backend, das unter Verwendung von Eloquent ORM auf eine MySQL-Datenbank zugreift.
 
 ![Reminder Calendar](Screenshot_Reminder_Calendar.png)
 
