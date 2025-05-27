@@ -81,7 +81,7 @@ $ALLOWED_ORIGINS = [
 #### 4. MySQL-Datenbank mit phpMyAdmin
 - Öffne http://localhost/phpmyadmin
 
-- Erstelle eine neue Datenbank mit dem Namen reminder_calendar
+- Mit phpMyAdmin erstelle eine Datenbank namens reminder_calendar und einen Benutzer reminder_calendar in MySQL. Gewähre diesem Benutzer alle Rechte auf dieser Datenbank.
 
 - Führe ggf. das SQL-Skript database/schema.sql aus, um Tabellen zu erstellen
 
@@ -91,7 +91,7 @@ $ALLOWED_ORIGINS = [
 DB_HOST=127.0.0.1
 DB_NAME=reminder-calendar
 DB_PORT=3306
-DB_USER=xxxxx
+DB_USER=reminder_calendar
 DB_PASS=xxxxx
 
 ```
