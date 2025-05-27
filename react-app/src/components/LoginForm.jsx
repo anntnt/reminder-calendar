@@ -18,7 +18,8 @@ const LoginForm = () => {
     setError('');
 
     try {
-      const res = await API.post('login.php', form);
+      const res = await API.post('/login.php', form);
+      console.log('Response:', res);
       const data = res.data;
    
       if (data.authenticated) {

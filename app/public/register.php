@@ -3,9 +3,7 @@
 /*ini_set('display_errors', 1);
 error_reporting(E_ALL);*/
 
-require '../config/bootstrap.php';
-require '../app/cors.php';
-enableCors($ALLOWED_ORIGINS, true);
+require_once __DIR__ . '/../config/bootstrap.php';
 use App\Models\User;
 
 header('Content-Type: application/json');

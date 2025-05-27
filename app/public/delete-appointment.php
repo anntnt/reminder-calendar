@@ -1,10 +1,8 @@
 <?php
 use App\Models\Appointment;
 
-require '../config/bootstrap.php';
-require '../app/cors.php';
-enableCors($ALLOWED_ORIGINS, true);
-require '../app/auth.php';
+require_once __DIR__ . '/../config/bootstrap.php';
+require '../auth.php';
 
 header('Content-Type: application/json');
 

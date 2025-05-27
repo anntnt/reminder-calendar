@@ -1,24 +1,22 @@
-app = "reminder-calendar"
+# fly.toml app configuration file generated for reminder-calendar on 2025-05-23T15:59:47+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'reminder-calendar'
+primary_region = 'fra'
 
 [build]
-  dockerfile = "Dockerfile"
 
-[env]
-  APP_ENV = "production"
-  DB_HOST = "reminder-db.internal"
-  DB_PORT = "3306"
-  DB_DATABASE = "reminder"
-  DB_USERNAME = "reminder"
-  PORT = "8080"
-
-[[services]]
+[http_service]
   internal_port = 8080
-  protocol = "tcp"
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
-  [[services.ports]]
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
