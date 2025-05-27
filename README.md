@@ -136,7 +136,7 @@ MAIL_FROM_NAME="Reminder System"
 ![Mailhog](Screenshot_mailhog.png)
 
 Oder
-in Wondows mit PaperCut SMTP anzeigen:
+in Windows mit PaperCut SMTP anzeigen:
 - Papercut SMTP herunterladen
 
   Gehe zur [Papercut SMTP GitHub-Releases-Seite](https://github.com/ChangemakerStudios/Papercut-SMTP/releases).  
@@ -144,29 +144,29 @@ in Wondows mit PaperCut SMTP anzeigen:
 
 - Papercut SMTP installieren
 
- Führe die heruntergeladene `.exe`-Datei aus.  
- Folge den Installationsanweisungen (normalerweise einfach Weiter, Weiter, Fertig stellen).  
- Nach der Installation startet Papercut automatisch.
+  Führe die heruntergeladene `.exe`-Datei aus.  
+  Folge den Installationsanweisungen (normalerweise einfach Weiter, Weiter, Fertig stellen).  
+  Nach der Installation startet Papercut automatisch.
 
 - Deine Anwendung konfigurieren, um E-Mails über Papercut zu senden
 
- **SMTP-Server:** `localhost`  
- **Port:** `25` (Standard)  
- **Keine Authentifizierung erforderlich**  
- **Kein SSL/TLS erforderlich**
+  **SMTP-Server:** `localhost`  
+  **Port:** `25` (Standard)  
+  **Keine Authentifizierung erforderlich**  
+  **Kein SSL/TLS erforderlich**
 
 - E-Mails aus deiner App senden
 
- Jede E-Mail, die an Papercut gesendet wird, wird lokal abgefangen und **nicht wirklich versendet**.
+  Jede E-Mail, die an Papercut gesendet wird, wird lokal abgefangen und **nicht wirklich versendet**.
 
 - Abgefangene E-Mails anzeigen
 
- Papercut zeigt eine einfache Benutzeroberfläche mit einer Liste empfangener E-Mails.  
- Klicke auf eine E-Mail, um deren Inhalt, Header, Anhänge usw. anzuzeigen.
+  Papercut zeigt eine einfache Benutzeroberfläche mit einer Liste empfangener E-Mails.  
+  Klicke auf eine E-Mail, um deren Inhalt, Header, Anhänge usw. anzuzeigen.
 
 - Papercut beenden (optional)
 
- Du kannst das Papercut-Fenster schließen oder die App beenden, wenn du mit dem Testen fertig bist.
+  Du kannst das Papercut-Fenster schließen oder die App beenden, wenn du mit dem Testen fertig bist.
 
 ## Zukünftige Erweiterungen
 - Möglichkeit zum Ändern des Passworts
