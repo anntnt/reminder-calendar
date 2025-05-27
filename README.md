@@ -49,7 +49,7 @@ git clone https://github.com/anntnt/reminder-calendar.git reminder-calendar
 cd reminder-calendar/app
 composer install
 ```
--Create a .env file and insert your database credentials. Replace all instances of xxxxxx with the appropriate values.
+- Erstelle eine .env-Datei und trage deine Datenbank-Zugangsdaten ein. Ersetze dabei alle Vorkommen von xxxxxx durch die entsprechenden Werte.
 ```bash
 DB_HOST=xxxxxx
 DB_DATABASE=xxxxx
