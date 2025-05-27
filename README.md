@@ -49,13 +49,7 @@ git clone https://github.com/anntnt/reminder-calendar.git reminder-calendar
 cd reminder-calendar/app
 composer install
 ```
-- Erstelle eine .env-Datei und trage deine Datenbank-Zugangsdaten ein. Ersetze dabei alle Vorkommen von xxxxxx durch die entsprechenden Werte.
-```bash
-DB_HOST=xxxxxx
-DB_DATABASE=xxxxx
-DB_USERNAME=xxxxx
-DB_PASSWORD=xxxxx
-```
+
 - Eloquent konfigurieren:
 
 Bearbeite die Datei app/config/bootstrap.php:
