@@ -1,9 +1,20 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../cors.php';
+
+$ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://reminder-calendar.fly.dev'
+];
+
+enableCors($ALLOWED_ORIGINS, true);
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+//$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+
+
 $dotenv->load();
 
 // Debug: Check if DB_NAME is set (optional)
@@ -28,9 +39,4 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-// Configuration for CORS
-$ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://reminder-calendar.fly.dev'
-];
 
