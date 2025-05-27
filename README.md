@@ -112,7 +112,8 @@ php app/send_reminders.php
 **Automatisierung (Cronjob)**
 Um tägliche Erinnerungen automatisch zu versenden, kann man einen Cronjob einrichten
 
-#### 8. Testmails mit Mailhog anzeigen
+#### 8. Testmails 
+In macOS mit MailHog anzeigen:
 
 Falls man Mailhog zur lokalen Mail-Entwicklung verwendet:
 
@@ -133,6 +134,39 @@ MAIL_FROM_ADDRESS=no-reply@example.com
 MAIL_FROM_NAME="Reminder System"
 ```
 ![Mailhog](Screenshot_mailhog.png)
+
+Oder
+in Wondows mit PaperCut SMTP anzeigen:
+- Papercut SMTP herunterladen
+
+  Gehe zur [Papercut SMTP GitHub-Releases-Seite](https://github.com/ChangemakerStudios/Papercut-SMTP/releases).  
+  Lade die neueste **Papercut.Windows.exe** (den Installer) herunter.
+
+- Papercut SMTP installieren
+
+ Führe die heruntergeladene `.exe`-Datei aus.  
+ Folge den Installationsanweisungen (normalerweise einfach Weiter, Weiter, Fertig stellen).  
+ Nach der Installation startet Papercut automatisch.
+
+- Deine Anwendung konfigurieren, um E-Mails über Papercut zu senden
+
+ **SMTP-Server:** `localhost`  
+ **Port:** `25` (Standard)  
+ **Keine Authentifizierung erforderlich**  
+ **Kein SSL/TLS erforderlich**
+
+- E-Mails aus deiner App senden
+
+ Jede E-Mail, die an Papercut gesendet wird, wird lokal abgefangen und **nicht wirklich versendet**.
+
+- Abgefangene E-Mails anzeigen
+
+ Papercut zeigt eine einfache Benutzeroberfläche mit einer Liste empfangener E-Mails.  
+ Klicke auf eine E-Mail, um deren Inhalt, Header, Anhänge usw. anzuzeigen.
+
+- Papercut beenden (optional)
+
+ Du kannst das Papercut-Fenster schließen oder die App beenden, wenn du mit dem Testen fertig bist.
 
 ## Zukünftige Erweiterungen
 - Möglichkeit zum Ändern des Passworts
