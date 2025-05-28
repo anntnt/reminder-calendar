@@ -27,6 +27,7 @@ const RegisterForm = () => {
 
     try {
       const res = await API.post('/register.php', form);
+      console.log('Registration response:', res.data);
       setMessage('Registrierung erfolgreich! Weiterleitung zum Login...');
       
       // Redirect after 2 seconds
