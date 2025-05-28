@@ -11,8 +11,24 @@ enableCors($ALLOWED_ORIGINS, true);
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Dotenv\Dotenv;
 
-//$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+
+// Try Fly.io path first
+
+$envPath = __DIR__ . '/../';
+
+
+
+if (!file_exists($envPath . '.env')) {
+
+    // Fallback to local path
+
+    $envPath = __DIR__ . '/../../';
+
+}
+
+
+
+$dotenv = Dotenv::createImmutable($envPath);
 
 
 $dotenv->load();
@@ -38,5 +54,4 @@ $capsule->addConnection([
 
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
-
 
