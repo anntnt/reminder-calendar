@@ -13,10 +13,18 @@ function Appointments() {
 
   const loadAppointments = async () => {
     try {
-      const res = await API.get('get-appointment.php');
+      const res = await API.get('/api/appointments');
+      console.log('Loaded appointments:', res.data); // ✅ Log success
       setAppointments(res.data);
     } catch (err) {
-      console.error('Error loading appointments', err);
+      console.error('❌ Error loading appointments:', err); // Log full error
+      if (err.response) {
+        console.error('Response:', err.response.data);
+      } else if (err.request) {
+        console.error('Request made, no response:', err.request);
+      } else {
+        console.error('Error setting up request:', err.message);
+      }
     }
   };
 
@@ -38,9 +46,7 @@ function Appointments() {
       setEditingAppointment(null);
     }
     try {
-      await API.delete('/delete-appointment.php', {
-        data: { id }
-      });      
+      await API.delete(`/api/appointments/${id}`);      
       setSuccessMessage('Termin erfolgreich gelöscht.');
       setTimeout(() => setSuccessMessage(''), 3000); // Clear after 3 seconds
     } catch (err) {

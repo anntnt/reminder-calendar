@@ -78,12 +78,12 @@ const AppointmentForm = ({ onSubmit: externalOnSubmit, defaultValues, onCancelEd
       if (defaultValues?.id) {
         // EDIT MODE
         payload.id = defaultValues.id;
-        res = await API.post('/update-appointment.php', payload);
+        res = await API.put(`/api/appointments/${defaultValues.id}`, payload);
         setMessage('✅ Termin erfolgreich aktualisiert!');
         setTimeout(() => setMessage(''), 3000); // Clear after 3 seconds
       } else {
         // CREATE MODE
-        res = await API.post('/create-appointment.php', payload);
+        res = await API.post('/api/appointments', payload);
         setMessage('✅ Termin erfolgreich erstellt!');
         setTimeout(() => setMessage(''), 3000); // Clear after 3 seconds
       }

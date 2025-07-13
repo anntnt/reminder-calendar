@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Only rewrite non-api requests
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteRule ^ index.html [QSA,L]

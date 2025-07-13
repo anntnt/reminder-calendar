@@ -10,7 +10,7 @@ const Logout = () => {
   useEffect(() => {
     const logout = async () => {
       try {
-        const res = await API.post('logout.php');
+        const res = await API.post('/api/logout');
         const data = res.data;
         if (!data.authenticated) {
           setIsLoggedIn(false);

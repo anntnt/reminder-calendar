@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await API.get('/auth-check.php', { withCredentials: true });
+        const res = await API.get('/api/check', { withCredentials: true });
         if (res.data.authenticated) {
           setIsLoggedIn(true);
           setUserName(res.data.name);

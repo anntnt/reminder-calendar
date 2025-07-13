@@ -24,9 +24,11 @@ const RegisterForm = () => {
     e.preventDefault();
     setMessage('');
     setError('');
-
+    console.log('Submitting form:', form);  // 
     try {
-      const res = await API.post('/register.php', form);
+      console.log('Form data:', form);
+
+      const res = await API.post('/api/register', form);
       console.log('Registration response:', res.data);
       setMessage('Registrierung erfolgreich! Weiterleitung zum Login...');
       

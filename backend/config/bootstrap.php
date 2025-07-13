@@ -1,32 +1,18 @@
 <?php
+file_put_contents('php://stderr', "✅ bootstrap.php loaded\n");
+
 require_once __DIR__ . '/../../vendor/autoload.php';
-require_once __DIR__ . '/../cors.php';
+require_once __DIR__ . '/cors.php';
 
-$ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://reminder-calendar.fly.dev'
-];
 
-enableCors($ALLOWED_ORIGINS, true);
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Dotenv\Dotenv;
 
 
-// Try Fly.io path first
-
-$envPath = __DIR__ . '/../';
-
-
-
+$envPath = __DIR__ . '/../../';
 if (!file_exists($envPath . '.env')) {
-
-    // Fallback to local path
-
-    $envPath = __DIR__ . '/../../';
-
+    die('❌ .env file not found at expected location: ' . $envPath . '.env');
 }
-
-
 
 $dotenv = Dotenv::createImmutable($envPath);
 
@@ -47,8 +33,8 @@ $capsule->addConnection([
     'database'  => $_ENV['DB_NAME'] ,
     'username'  => $_ENV['DB_USER'],
     'password'  => $_ENV['DB_PASS'] ,
-    'charset'   => 'utf8mb4',
-    'collation' => 'utf8mb4_unicode_ci',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
 ]);
 
