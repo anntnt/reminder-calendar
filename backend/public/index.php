@@ -3,19 +3,24 @@
 // Load CORS headers first
 require_once __DIR__ . '/../config/cors.php';
 
-// Autoload classes
+// ✅ Stop execution early if this is a preflight (OPTIONS) request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+// Autoload classes and bootstrap
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../config/bootstrap.php';
-
 
 use App\Controllers\AuthController;
 use App\Controllers\AppointmentController;
 
+// Set JSON content type for response
 header('Content-Type: application/json');
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
-
 
 // AUTH routes
 if ($uri === '/api/register' && $method === 'POST') {
@@ -33,14 +38,14 @@ if ($uri === '/api/register' && $method === 'POST') {
     exit;
 }
 
-// APPOINTMENT routes (example protected)
+// APPOINTMENT routes
 elseif ($uri === '/api/appointments' && $method === 'GET') {
     $controller = new AppointmentController();
     echo json_encode($controller->get());
 } elseif ($uri === '/api/appointments' && $method === 'POST') {
     $controller = new AppointmentController();
     echo json_encode($controller->create(json_decode(file_get_contents('php://input'), true)));
-}elseif (preg_match('#^/api/appointments/(\d+)$#', $uri, $matches)) {
+} elseif (preg_match('#^/api/appointments/(\d+)$#', $uri, $matches)) {
     $id = (int)$matches[1];
     $controller = new AppointmentController();
 
@@ -54,12 +59,10 @@ elseif ($uri === '/api/appointments' && $method === 'GET') {
         error_log("Delete request for appointment ID $id");
         echo json_encode($controller->delete($id));
     } else {
-        error_log("Invalid method $method for /api/appointments/$id");
         http_response_code(405);
         echo json_encode(['error' => 'Method not allowed']);
     }
-}
- else {
+} else {
     // fallback
     http_response_code(404);
     echo json_encode(['error' => 'Not found']);
